@@ -18,7 +18,7 @@ print("number of fields: %d" % abs_omega)
 print(df.head())
 
 #features that are used to find subgroups with
-features = ['wage', 'weducation', 'heducation', 'wismuslim', 'wwork']
+features = ['wage', 'weducation', 'heducation', 'numborn', 'wwork', 'hocc', 'sol', 'good_media_exposure']
 targets = ['contraceptive', 'wismuslim']
 
 ####################################################################################################################################
