@@ -22,47 +22,9 @@ features = ['wage', 'weducation', 'heducation', 'numborn', 'wwork', 'hocc', 'sol
 targets = ['contraceptive', 'wismuslim']
 
 ####################################################################################################################################
-# Initialize stats priorityqueue which will be a min-heap NVM SHOULD BE DONE AT EACH LEVEL SO THAT IT IS EMPTY
-
-alpha = 0.05
-####################################################################################################################################
 # EMM framework
 
 import heapq
-
-
-########################################### FOR THESIS: CLASS UNBOUNDED PRIORITY QUEUE #############################################
-class UnboundedPriorityQueue:
-    """
-    Ensures uniqueness
-    """
-
-    def __init__(self):
-        self.values = []
-
-    def add(self, pval, quality, desc, n):
-        if any((set(e) == set(desc) for (_, e, _) in self.values)):
-            return  # avoid duplicates of exactly the same description
-
-        # NOW ALSO AVOID DUPLICATES OF descriptions where each individual element is the same but their odering is different
-        # multiple pval also by -1 because we want to build a max-heap for our pvals
-
-        new_entry = [(-1*pval, -1*quality), desc, n]
-        heapq.heappush(self.values, new_entry)
-
-    def get_values(self):
-        for (q, e, n) in sorted(self.values, reverse=True):
-            yield (q, e, n)
-
-    def show_contents(self):  # for debugging
-        print("show_contents")
-        for (q, entry_count, e) in self.values:
-            print(q, entry_count, e)
-
-    def pop(self):
-        return heapq.heappop(self.values)
-
-####################################################################################################################################
 
 #
 class BoundedPriorityQueue:
@@ -77,7 +39,7 @@ class BoundedPriorityQueue:
         self.entry_count = 0
 
     def add(self, element, quality, **adds):
-        if any((set(e) == set(element) for (_, _, e, _) in self.values)): #use set to ensure that different orderings are also picked upon, e.g. [A=a, B=b] == [B=b, A=a]
+        if any((set(e) == set(element) for (_, _, e, _) in self.values)):
             return  # avoid duplicates
         #if any((self.desc_intersect(element, e) for (_,_,e) in self.values)):
         #    return
@@ -101,7 +63,7 @@ class BoundedPriorityQueue:
 #
 class Queue:
     """
-    Ensures uniqueness
+    Ensures uniqness
     """
 
     def __init__(self):
@@ -145,50 +107,21 @@ def EMM(w, d, q, eta, satisfies_all, eval_quality, catch_all_description):
     resultSet = BoundedPriorityQueue(q)
     candidateQueue = Queue()
     candidateQueue.enqueue(catch_all_description)
-    stats_queue = UnboundedPriorityQueue() # we can put stats queue here as the whole queue will be emptied by the end of the procedure
-
     for level in range(d):
         print("level : ", level)
         beam = BoundedPriorityQueue(w)
-        largest_rank_found = False # used to correct for multiple testing in each search level
         for seed in candidateQueue.get_values():
             print("    seed : ", seed)
             for desc in eta(seed):
                 if satisfies_all(desc):
-                    ### compute p-value between significance between the desc and the complement's targets
-                    pval = fisher_exact(desc) # given a subgroup description desc, compute pval between the subgroup and the complement
-                    quality, n = eval_quality(desc)
-
-                    stats_queue.add(pval, quality, desc, n)
-
-        # store the number of hypotheses we have tested, which is equal to the number of elements in our stats queue
-        m = len(stats_queue.values)
-        rank = len(stats_queue.values) # we start at the last hypothesis so it will be equal to the total size
-
-        # here the multiple testing procedure starts
-        while stats_queue.values != []:
-            candidate = stats_queue.pop()
-            pval = -1*candidate[0][0] # multiple by -1 again to get a positive pval
-            desc = candidate[1]
-            n = candidate[2]
-            print("candidate: ", candidate)
-            quality = -1*candidate[0][1] # multiply back to positive
-            # do multiple testing correction according to holm-bonferroni
-            if largest_rank_found:
-                # once it is found we continue simply adding all remaining elements from stats into our beam and resultset queues
-                resultSet.add(desc, quality, n=n)  # as the description was deemed significant, we add it back to the resultSet
-                beam.add(desc, quality)  # as the description was deemed significant, we add it to the beam
-            elif (pval <= alpha / (m - rank + 1)):
-                largest_rank_found = True # we found our largest rank for which it is significant
-                # add the current candidate to the beam and resultset
-                resultSet.add(desc, quality, n=n)  # as the description was deemed significant, we add it back to the resultSet
-                beam.add(desc, quality)  # as the description was deemed significant, we add it to the beam
-            else:
-                rank -= 1   # decrement rank by one as we are traversing in descending order, we only continue doing this for as long as we haven't found a significant description
-
+                    quality,n = eval_quality(desc)
+                    print("        desc : ", desc, ", quality : ", quality, "n: ", n)
+                    resultSet.add(desc, quality, n=n)
+                    beam.add(desc, quality)
+        # beam.show_contents()
+        #candidateQueue.clear()
         candidateQueue = Queue()
         candidateQueue.add_all(desc for (_, desc, _) in beam.get_values())
-
     return resultSet
 
 ####################################################################################################################################
@@ -197,6 +130,7 @@ def refine(desc, more):
     copy = desc[:]
     copy.append(more)
     return copy
+
 
 def eta(seed):
     print("eta ", seed)
@@ -248,9 +182,6 @@ def eta(seed):
                 candidate = "{} == {}".format(f, i)
                 if not candidate in seed: # if not already there
                     yield refine(seed, candidate)
-                # candidate = "{} != {}".format(f, i)
-                # if not candidate in seed: # if not already there
-                #     yield refine(seed, candidate)
         else:
             assert False
 
@@ -264,6 +195,7 @@ def satisfies_all(desc):
     return sum(ind) > 5
 
 def eval_quality(desc):
+    print("desc before as_string: ", desc)
     d_str = as_string(desc) # this gives issues if the target is in fact boolean
     ind = df.eval(d_str)
 
@@ -271,46 +203,18 @@ def eval_quality(desc):
     n = len(subgroup_targets)
     crosstab = pd.crosstab(subgroup_targets[targets[0]], subgroup_targets[targets[1]]) #create crosstab for subgroup targets
     crosstab = np.array(crosstab)
+    print("crosstab for desc: ", crosstab, desc)
 
     res = stats.loglin(crosstab, [1, 2], fit=True, param=True)
     deviance = np.array(res[0])[0]
 
     score = deviance
+    print("deviance: ", deviance, "description: ", d_str, "n: ", n)
     return score, n
-
-#### FISHER EXACT FUNCTION
-def fisher_exact(desc):
-# create dataframe with columns: group (subgroup/complement), target (v1*t1, v1*t2, v2*t1, v2*t2 etc for targets v and t)
-    d_str = as_string(desc) # this gives issues if the target is in fact boolean
-    ind = df.eval(d_str)
-
-    df_subgroup_complement = df[targets].copy()
-    df_subgroup_complement['group'] = '' #initialize empty column to store whether the group belongs to subgroup or complement
-
-    # prepare column to hold all possible combinations of target values
-    for target in targets: # there will be two targets
-        df_subgroup_complement[target] = df_subgroup_complement[target].astype('str')
-
-    df_subgroup_complement['targets'] = df_subgroup_complement[[targets[0], targets[1]]].agg('-'.join, axis=1)
-    df_subgroup_complement.drop(columns = targets, inplace=True) #remove targets as the information is not contained in the targets column
-
-    # indicate whether group belongs to subgroup or to complement
-    df_subgroup_complement['group'].loc[ind] = 'subgroup'
-    df_subgroup_complement['group'].loc[~ind] = 'complement'
-
-    # create crosstab
-    crosstab = pd.crosstab(df_subgroup_complement['targets'], df_subgroup_complement['group'])
-    crosstab = np.array(crosstab)
-
-    # finally compute pvalue, keep workspace at least 2e9 for 2x6 table, or simulate by using: simulate_p_value = True
-    pval = stats.fisher_test(crosstab, simulate_p_value = True, B=50000)[0][0]
-
-    return pval
-
 
 
 # EMM_res = EMM(100, 3, 100, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
-EMM_res = EMM(30, 2, 40, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
+EMM_res = EMM(10, 2, 10, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
 
 headers = ["Quality","Description", "n" ]
 
@@ -322,6 +226,4 @@ for (q,d, adds) in EMM_res.get_values():
     #new_row = pd.DataFrame({"Quality": q, "Description": d, "Mean": adds["mean"], "Std": adds["std"], "t": adds["t"], "n": adds["n"]})
     print(q,d, adds)
 
-pd.DataFrame(exc_results, columns=headers).to_csv("./data/results_fisher_benjaminihochberg.csv",index=False, sep=";")
-
-print("******************************************************************")
+pd.DataFrame(exc_results, columns=headers).to_csv("./data/results_association_model_class.csv",index=False, sep=";")

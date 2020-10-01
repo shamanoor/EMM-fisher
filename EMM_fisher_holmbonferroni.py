@@ -167,8 +167,10 @@ def EMM(w, d, q, eta, satisfies_all, eval_quality, catch_all_description):
             candidate = stats_queue.pop()
             pval = candidate[0][0]
             desc = candidate[1]
+            n = candidate[2]
             quality = -1*candidate[0][1] # multiply back to positive
             # do multiple testing correction according to holm-bonferroni
+            print("candidate: ", candidate)
 
             if (pval > alpha / (m - rank + 1)):
                 break  # no longer significant so we exit the while loop
@@ -264,9 +266,11 @@ def eval_quality(desc):
     n = len(subgroup_targets)
     crosstab = pd.crosstab(subgroup_targets[targets[0]], subgroup_targets[targets[1]]) #create crosstab for subgroup targets
     crosstab = np.array(crosstab)
+    print("crosstab for desc: ", crosstab, desc)
 
     res = stats.loglin(crosstab, [1, 2], fit=True, param=True)
     deviance = np.array(res[0])[0]
+    print("deviance: ", deviance, "description: ", d_str, "n: ", n)
 
     score = deviance
     return score, n
@@ -303,7 +307,7 @@ def fisher_exact(desc):
 
 
 # EMM_res = EMM(100, 3, 100, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
-EMM_res = EMM(10, 2, 10, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
+EMM_res = EMM(30, 2, 40, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
 
 headers = ["Quality","Description", "n" ]
 
