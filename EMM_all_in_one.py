@@ -18,10 +18,20 @@ print("number of fields: %d" % abs_omega)
 print(df.head())
 
 #features that are used to find subgroups with
-features = ['wismuslim', 'wwork', 'heducation', 'weducation', 'hocc', 'sol']
-targets = ['contraceptive', 'good_media_exposure']
-
+features = ['weducation', 'heducation', 'wismuslim', 'wwork', 'hocc', 'sol', 'contraceptive', 'good_media_exposure', 'wage', 'numborn']
+targets = ['contraceptive', 'weducation']
+features = [element for element in features if element not in targets]  # remove target features from feature list
 alpha = 0.05
+
+'''
+w - width of beam
+d - num levels
+q - max results
+'''
+
+width = 10
+depth = 2
+num_results = 5
 
 ####################################################################################################################################
 # EMM framework
@@ -302,23 +312,22 @@ def eta(seed):
                 candidate = "{} == '{}'".format(f, i)
                 if not candidate in seed: # if not already there
                     yield refine(seed, candidate)
-                # candidate = "{} != '{}'".format(f, i)
-                # if not candidate in seed: # if not already there
-                #     yield refine(seed, candidate)
+                # According to the paper this must be in here so let's leave it in
+                candidate = "{} != '{}'".format(f, i)
+                if not candidate in seed: # if not already there
+                    yield refine(seed, candidate)
+
         elif (df_sub[f].dtype == 'int64'):
             dat = np.sort(column_data)
             dat = dat[np.logical_not(np.isnan(dat))]
             for i in range(1,6): #determine the number of chunks you want to divide your data in
                 x = np.percentile(dat,100/i) #
-                candidate = "{} == {}".format(f, x)
-                if not candidate in seed:  # if not already there
+                candidate = "{} <= {}".format(f, x)
+                if not candidate in seed: # if not already there
                     yield refine(seed, candidate)
-                # candidate = "{} <= {}".format(f, x)
-                # if not candidate in seed: # if not already there
-                #     yield refine(seed, candidate)
-                # candidate = "{} > {}".format(f, x)
-                # if not candidate in seed: # if not already there
-                #     yield refine(seed, candidate)
+                candidate = "{} > {}".format(f, x)
+                if not candidate in seed: # if not already there
+                    yield refine(seed, candidate)
         elif (df_sub[f].dtype == 'bool'):
             uniq = column_data.dropna().unique()
             for i in uniq:
@@ -406,7 +415,7 @@ headers = ["Quality","Description", "n" ]
 
 # DO RUN FOR EACH MODEL
 print("****************************** REGULAR ASSOCIATION MODEL ******************************")
-EMM_association = EMM(10, 2, 10, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
+EMM_association = EMM(width, depth, num_results, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
 
 exc_results_association = []
 
@@ -416,11 +425,11 @@ for (q,d, adds) in EMM_association.get_values():
     print(q,d, adds)
 
 # save to csv
-pd.DataFrame(exc_results_association, columns=headers).to_csv("./results/association_model_{}_{}.csv".format(targets[0], targets[1]),index=False, sep=";")
+pd.DataFrame(exc_results_association, columns=headers).to_csv("./results/association_model_{}_{}_{}_{}_{}.csv".format(targets[0], targets[1], width, depth, num_results),index=False, sep=";")
 
 
 print("****************************** HOLM BONFERRONI ******************************")
-EMM_fisher_holmbonferroni = EMM_fisher_holmbonferroni(10, 2, 10, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
+EMM_fisher_holmbonferroni = EMM_fisher_holmbonferroni(width, depth, num_results, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
 
 exc_results_holmbonferroni = []
 
@@ -430,10 +439,10 @@ for (q,d, adds) in EMM_fisher_holmbonferroni.get_values():
     print(q,d, adds)
 
 # save to csv
-pd.DataFrame(exc_results_holmbonferroni, columns=headers).to_csv("./results/holm_bonferroni_{}_{}.csv".format(targets[0], targets[1]),index=False, sep=";")
+pd.DataFrame(exc_results_holmbonferroni, columns=headers).to_csv("./results/holm_bonferroni_{}_{}_{}_{}_{}.csv".format(targets[0], targets[1], width, depth, num_results),index=False, sep=";")
 
 print("****************************** BENJAMINI HOCHBERG ******************************")
-EMM_fisher_benjaminihochberg = EMM_fisher_benjaminihochberg(10, 2, 10, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
+EMM_fisher_benjaminihochberg = EMM_fisher_benjaminihochberg(width, depth, num_results, eta, satisfies_all, eval_quality, []) # second parameter is d (the depth)
 
 exc_results_benjaminihochberg = []
 
@@ -443,4 +452,4 @@ for (q,d, adds) in EMM_fisher_benjaminihochberg.get_values():
     print(q,d, adds)
 
 # save to CSV
-pd.DataFrame(exc_results_benjaminihochberg, columns=headers).to_csv("./results/benjamini_hochberg__{}_{}.csv".format(targets[0], targets[1]),index=False, sep=";")
+pd.DataFrame(exc_results_benjaminihochberg, columns=headers).to_csv("./results/benjamini_hochberg_{}_{}_{}_{}_{}.csv".format(targets[0], targets[1], width, depth, num_results),index=False, sep=";")
