@@ -19,7 +19,7 @@ print(df.head())
 
 #features that are used to find subgroups with
 features = ['weducation', 'heducation', 'wismuslim', 'wwork', 'hocc', 'sol', 'contraceptive', 'good_media_exposure', 'wage', 'numborn']
-targets = ['contraceptive', 'weducation']
+targets = ['contraceptive', 'good_media_exposure']
 features = [element for element in features if element not in targets]  # remove target features from feature list
 alpha = 0.05
 
@@ -29,9 +29,9 @@ d - num levels
 q - max results
 '''
 
-width = 10
+width = 30
 depth = 2
-num_results = 5
+num_results = 20
 
 ####################################################################################################################################
 # EMM framework
@@ -311,11 +311,15 @@ def eta(seed):
             for i in uniq:
                 candidate = "{} == '{}'".format(f, i)
                 if not candidate in seed: # if not already there
-                    yield refine(seed, candidate)
+                    identical = covers_same_data(seed, candidate)   # TRY TO FIX INT ISSUE
+                    if not identical:                               # TRY TO FIX INT ISSUE
+                        yield refine(seed, candidate)
                 # According to the paper this must be in here so let's leave it in
                 candidate = "{} != '{}'".format(f, i)
                 if not candidate in seed: # if not already there
-                    yield refine(seed, candidate)
+                    identical = covers_same_data(seed, candidate)   # TRY TO FIX INT ISSUE
+                    if not identical:                               # TRY TO FIX INT ISSUE
+                        yield refine(seed, candidate)
 
         elif (df_sub[f].dtype == 'int64'):
             dat = np.sort(column_data)
@@ -324,21 +328,54 @@ def eta(seed):
                 x = np.percentile(dat,100/i) #
                 candidate = "{} <= {}".format(f, x)
                 if not candidate in seed: # if not already there
-                    yield refine(seed, candidate)
+                    identical = covers_same_data(seed, candidate)   # TRY TO FIX INT ISSUE
+                    if not identical:                               # TRY TO FIX INT ISSUE
+                        yield refine(seed, candidate)
                 candidate = "{} > {}".format(f, x)
                 if not candidate in seed: # if not already there
-                    yield refine(seed, candidate)
+                    identical = covers_same_data(seed, candidate)   # TRY TO FIX INT ISSUE
+                    if not identical:                               # TRY TO FIX INT ISSUE
+                        yield refine(seed, candidate)
         elif (df_sub[f].dtype == 'bool'):
             uniq = column_data.dropna().unique()
             for i in uniq:
                 candidate = "{} == {}".format(f, i)
                 if not candidate in seed: # if not already there
-                    yield refine(seed, candidate)
+                    if candidate == []:
+                        yield refine(seed, candidate)
+                    identical = covers_same_data(seed, candidate)   # TRY TO FIX INT ISSUE
+                    if not identical:                               # TRY TO FIX INT ISSUE
+                        yield refine(seed, candidate)
         else:
             assert False
 
 def as_string(desc):
     return ' and '.join(desc)
+
+def covers_same_data(candidate, seed):
+    d_refinement = refine(candidate, seed) # refine subgroup
+    d_refinement_str = as_string(d_refinement) # prepare to select seed and refinement df
+
+    ind_refinement = df.eval(d_refinement_str) # This is then new subgroup of which we want to test if it is the same
+    # as the seed
+    ind_seed = df.eval(seed) # this is the previous subgroup of which we have the refinement
+
+    df_refinement, df_seed = df.loc[ind_refinement], df.loc[ind_seed]# select dataframes
+
+    print("refinement, seed: ", d_refinement_str, seed)
+    print("df_refinement.equals(df_seed): ", df_refinement.equals(df_seed))
+    print("lengths of df_refinement and df_seed: ", len(df_refinement.index), len(df_seed.index))
+    if candidate == []:
+        # if this is the first seed, then include the description
+        return False
+
+    if df_seed.equals(df):
+        # if our improvement returns the entire dataset and it is not the first seed,
+        # then it will not improve the description because it does not add any additional filtering properties
+        return True
+
+    return df_refinement.equals(df_seed) # only if it returns the same dataset
+
 
 def satisfies_all(desc):
     d_str = as_string(desc)
@@ -399,7 +436,6 @@ def eval_quality(desc):
     n = len(subgroup_targets)
     crosstab = pd.crosstab(subgroup_targets[targets[0]], subgroup_targets[targets[1]]) #create crosstab for subgroup targets
     crosstab = np.array(crosstab)
-    print("crosstab for desc: ", crosstab, desc)
 
     res = stats.loglin(crosstab, [1, 2], fit=True, param=True)
     deviance = np.array(res[0])[0]
