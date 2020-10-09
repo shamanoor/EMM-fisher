@@ -11,15 +11,45 @@ rpy2.robjects.numpy2ri.activate()
 
 stats = importr('stats')
 
-df = pd.read_csv("./data/contraceptive_02_oct.csv")
-abs_omega = len(df)
-print("number of fields: %d" % abs_omega)
+dataset = 'contraceptive'
 
-print(df.head())
+if dataset == 'contraceptive':
+    df = pd.read_csv("./data/contraceptive_02_oct.csv")
+    abs_omega = len(df)
+    print("number of fields: %d" % abs_omega)
 
-#features that are used to find subgroups with
-features = ['weducation', 'heducation', 'wismuslim', 'wwork', 'hocc', 'sol', 'contraceptive', 'good_media_exposure', 'wage', 'numborn']
-targets = ['contraceptive', 'good_media_exposure']
+    print(df.head())
+
+    #features that are used to find subgroups with
+    features = ['weducation', 'heducation', 'wismuslim', 'wwork', 'hocc', 'sol', 'contraceptive', 'good_media_exposure', 'wage', 'numborn']
+    targets = ['contraceptive', 'good_media_exposure']
+
+if dataset == 'diabetes':
+
+    df = pd.read_csv("./data/diabetes.csv")
+    abs_omega = len(df)
+    print("number of fields: %d" % abs_omega)
+
+    print(df.head())
+
+    #features that are used to find subgroups with
+    features = ['Age', 'IsFemale', 'Polyuria', 'Polydipsia', 'sudden_weight_loss',
+           'weakness', 'Polyphagia', 'Genital_thrush', 'visual_blurring',
+           'Itching', 'Irritability', 'delayed_healing', 'partial_paresis',
+           'muscle_stiffness', 'Alopecia', 'Obesity', 'class']
+    targets = ['Obesity', 'class']
+
+if dataset == 'cars':
+    df = pd.read_csv("./data/car.csv")
+    abs_omega = len(df)
+    print("number of fields: %d" % abs_omega)
+
+    print(df.head())
+
+    # features that are used to find subgroups with
+    features = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'acceptability']
+    targets = ['acceptability', 'maint']
+
 features = [element for element in features if element not in targets]  # remove target features from feature list
 alpha = 0.05
 
@@ -352,22 +382,26 @@ def eta(seed):
 def as_string(desc):
     return ' and '.join(desc)
 
-def covers_same_data(candidate, seed):
-    d_refinement = refine(candidate, seed) # refine subgroup
+def covers_same_data(seed, candidate):
+    print("seed, candidate: ", seed, ", ", candidate)
+
+    if seed == []:
+        # if this is the first seed, then include the description
+        return False
+
+    d_refinement = refine(seed, candidate) # refine subgroup
     d_refinement_str = as_string(d_refinement) # prepare to select seed and refinement df
 
     ind_refinement = df.eval(d_refinement_str) # This is then new subgroup of which we want to test if it is the same
     # as the seed
-    ind_seed = df.eval(seed) # this is the previous subgroup of which we have the refinement
+    seed_str = as_string(seed)
+    ind_seed = df.eval(seed_str) # this is the previous subgroup of which we have the refinement
 
-    df_refinement, df_seed = df.loc[ind_refinement], df.loc[ind_seed]# select dataframes
+    df_refinement = df.loc[ind_refinement]
 
-    print("refinement, seed: ", d_refinement_str, seed)
+    df_seed = df.loc[ind_seed]# select dataframes
     print("df_refinement.equals(df_seed): ", df_refinement.equals(df_seed))
     print("lengths of df_refinement and df_seed: ", len(df_refinement.index), len(df_seed.index))
-    if candidate == []:
-        # if this is the first seed, then include the description
-        return False
 
     if df_seed.equals(df):
         # if our improvement returns the entire dataset and it is not the first seed,
@@ -375,6 +409,7 @@ def covers_same_data(candidate, seed):
         return True
 
     return df_refinement.equals(df_seed) # only if it returns the same dataset
+
 
 
 def satisfies_all(desc):
