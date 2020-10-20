@@ -1,0 +1,178 @@
+Quality;Description;n
+144.71067352020918;['numborn > 1.0'];1100
+144.49088237431212;"[""hocc != 'four'""]";1446
+140.77396599423275;['numborn > 2.0'];824
+136.17163240012525;"[""heducation != 'low'""]";1429
+131.9875660807315;['wage > 26.0'];1048
+127.4578721825693;['wage > 25.0'];1117
+125.29194976439894;['wage > 28.0'];926
+124.60293008003424;"[""hocc != 'four'"", 'wismuslim == True']";1228
+123.46168633813323;['wismuslim == True'];1253
+120.28744126570726;"[""heducation != 'low-moderate'""]";1295
+118.5370730350976;"[""sol != 'low-moderate'""]";1244
+116.92475507052755;"[""heducation != 'low'"", 'wismuslim == True']";1211
+116.84548619091655;['good_media_exposure == True'];1364
+116.63693691759555;['numborn > 1.0', 'wismuslim == True'];936
+115.84630818826686;['wage > 26.0', 'wismuslim == True'];851
+115.35941535716306;"[""heducation != 'low'"", 'good_media_exposure == True']";1334
+114.72864100101637;['numborn > 2.0', 'wismuslim == True'];701
+114.52570152030854;"[""sol != 'low'""]";1344
+114.37930683912083;['wage > 32.0'];693
+113.56195939378563;['numborn > 2.0', 'good_media_exposure == True'];745
+112.63579287205481;"[""hocc != 'four'"", 'good_media_exposure == True']";1343
+110.00338562988536;['numborn > 1.0', 'good_media_exposure == True'];1006
+109.06514106972895;['wage > 25.0', 'wismuslim == True'];916
+108.78367649683841;['numborn > 3.0'];565
+106.44830070505466;"[""heducation != 'low-moderate'"", 'wismuslim == True']";1083
+106.13051537471696;['numborn > 2.0', 'wwork == False'];642
+104.58983409327013;"[""heducation != 'low-moderate'"", 'good_media_exposure == True']";1228
+104.40100122100868;['wage > 28.0', 'wismuslim == True'];750
+103.31426901092009;"[""heducation != 'moderate-high'""]";1121
+98.5998210827973;['good_media_exposure == True', 'wismuslim == True'];1152
+98.4339562265282;['wage > 26.0', 'wwork == False'];757
+98.34613638115668;"[""hocc != 'three'""]";888
+98.05309503309334;"[""sol != 'low-moderate'"", 'good_media_exposure == True']";1175
+96.73502418763435;['wismuslim == True', 'wwork == False'];955
+96.70730327479731;['wage > 32.0', 'wismuslim == True'];549
+96.40909505880552;['numborn > 1.0', 'wwork == False'];846
+96.09729066512702;['wage > 26.0', 'good_media_exposure == True'];958
+95.78230631969372;"[""sol != 'low'"", 'good_media_exposure == True']";1264
+93.97792228410374;['wage > 28.0', 'wwork == False'];667
+91.89750125618816;['wage > 25.0', 'good_media_exposure == True'];1026
+91.25872285936681;['wage > 28.0', 'good_media_exposure == True'];843
+90.91450558497532;"[""hocc != 'one'""]";1037
+88.7096731605122;"[""heducation != 'moderate-high'"", 'wismuslim == True']";928
+87.12829835441752;"[""heducation != 'low-moderate'"", 'wwork == False']";967
+86.31084951852417;"[""hocc != 'two'""]";1048
+85.37350949991983;['numborn > 3.0', 'wismuslim == True'];497
+85.09398943582966;['wage > 32.0', 'wwork == False'];512
+81.97586402031176;"[""hocc != 'three'"", 'wismuslim == True']";728
+81.52436231100859;"[""hocc != 'three'"", 'good_media_exposure == True']";833
+80.85002921011082;"[""heducation != 'moderate-high'"", 'good_media_exposure == True']";1039
+80.82049464930836;['numborn > 3.0', 'good_media_exposure == True'];504
+80.77838333258893;['good_media_exposure == True', 'wwork == False'];1022
+80.14788119380472;['numborn > 3.0', 'wwork == False'];445
+78.10285739617643;['wage > 32.0', 'good_media_exposure == True'];622
+77.78788733967939;"[""hocc != 'three'"", 'wwork == False']";651
+77.47896144372768;"[""heducation != 'moderate-high'"", 'wwork == False']";839
+72.51752694351732;"[""hocc != 'two'"", 'good_media_exposure == True']";975
+72.05301748195599;"[""hocc != 'one'"", 'wwork == False']";779
+72.00005341411611;"[""hocc != 'one'"", 'wismuslim == True']";889
+71.56489825491333;"[""hocc != 'one'"", 'good_media_exposure == True']";941
+69.50865989289915;['numborn <= 3.0'];908
+64.78044817762442;"[""sol != 'high'""]";789
+63.66061204392745;['numborn <= 3.0', 'wismuslim == True'];756
+63.51037826535582;['numborn <= 3.0', 'good_media_exposure == True'];860
+62.8376594302559;"[""hocc == 'two'""]";425
+59.93485378371234;"[""sol != 'high'"", 'wismuslim == True']";724
+57.97122519775921;"[""heducation == 'high'"", 'good_media_exposure == True']";873
+54.67900072023871;"[""heducation == 'high'""]";899
+52.27850191877847;"[""heducation == 'high'"", 'wismuslim == True']";716
+51.4933063324754;"[""sol != 'high'"", 'wwork == False']";614
+48.55948140721792;['numborn <= 3.0', 'wwork == False'];659
+48.329583099869666;"[""sol == 'high'""]";684
+47.35937583859438;"[""sol != 'high'"", 'good_media_exposure == True']";698
+47.206828482954585;"[""sol == 'high'"", 'good_media_exposure == True']";666
+44.90168925037014;['wage <= 32.0', 'good_media_exposure == True'];742
+44.67039682259477;"[""hocc == 'two'"", 'wismuslim == True']";339
+43.415649456370964;"[""heducation != 'high'""]";574
+42.3451706390076;['wage <= 32.0'];780
+40.92984542984437;"[""sol == 'high'"", 'wismuslim == True']";529
+40.17720772965345;"[""heducation == 'high'"", 'wwork == False']";672
+39.78341378570156;['numborn <= 2.0'];649
+38.95242390725189;"[""heducation != 'high'"", 'wismuslim == True']";537
+38.14060479963891;['wage <= 32.0', 'wwork == False'];592
+37.81590532600903;"[""sol == 'high'"", 'wwork == False']";490
+37.46933952312436;['numborn <= 2.0', 'wismuslim == True'];552
+36.76444639546335;"[""hocc == 'three'"", 'wismuslim == True']";525
+36.372882428270664;"[""heducation != 'high'"", 'wwork == False']";432
+36.17382999640519;"[""heducation == 'moderate-high'""]";352
+35.6155027188786;"[""hocc == 'three'""]";585
+35.46642915023266;['wage <= 32.0', 'wismuslim == True'];704
+35.223265162254975;"[""heducation != 'low-moderate'"", 'wwork == True']";328
+34.786479051735846;"[""heducation == 'moderate-high'"", 'wismuslim == True']";325
+31.024695295769316;"[""heducation == 'moderate-high'"", 'good_media_exposure == True']";325
+30.85537900477658;['numborn <= 2.0', 'good_media_exposure == True'];619
+30.294446265961604;"[""heducation == 'moderate-high'"", 'wwork == False']";265
+30.028169286226724;"[""sol != 'low-moderate'"", 'wwork == True']";312
+29.59002275013394;"[""heducation != 'moderate-high'"", 'wwork == True']";282
+29.25564747877277;"[""heducation != 'high'"", 'good_media_exposure == True']";491
+28.987955526776705;['numborn <= 1.0', 'wwork == False'];258
+28.631171518161743;['numborn <= 1.0', 'wismuslim == True'];317
+27.812104365248537;"[""hocc != 'three'"", 'wwork == True']";237
+27.096005053080006;['numborn <= 1.0', 'good_media_exposure == True'];358
+26.558294639648967;['numborn <= 1.0'];373
+26.24922647533481;['wage <= 28.0', 'good_media_exposure == True'];521
+26.039349453815515;"[""hocc == 'three'"", 'wwork == False']";453
+25.503877552243495;['wage <= 28.0'];547
+25.0849117543093;"[""hocc == 'three'"", 'good_media_exposure == True']";531
+24.795043657685127;['wage <= 28.0', 'wismuslim == True'];503
+24.7152657437346;['numborn <= 2.0', 'wwork == False'];462
+24.24156867491016;['numborn <= 3.0', 'wwork == True'];249
+23.60523154058618;['wage <= 25.0'];356
+23.09776142043723;['wage <= 28.0', 'wwork == False'];437
+22.16285424309289;"[""heducation == 'high'"", 'wwork == True']";227
+21.649650858153834;['wage <= 26.0'];425
+21.43454221743829;"[""sol == 'high'"", 'wwork == True']";194
+20.2869774006916;"[""hocc == 'one'""]";436
+18.13251639651025;['numborn <= 2.0', 'wwork == True'];187
+15.631894671213068;"[""sol == 'low-moderate'""]";229
+14.943686702404563;['numborn > 3.0', 'good_media_exposure == False'];61
+14.015425850247109;['numborn > 2.0', 'good_media_exposure == False'];79
+13.998974509912914;['numborn > 3.0', 'wismuslim == False'];68
+13.52925354364857;['wage > 26.0', 'good_media_exposure == False'];90
+13.27833553757743;['numborn > 1.0', 'good_media_exposure == False'];94
+13.244858581057382;['wage > 25.0', 'good_media_exposure == False'];91
+13.200964434140053;"[""sol != 'low'"", 'good_media_exposure == False']";80
+12.973602016534219;['numborn > 2.0', 'wismuslim == False'];123
+12.829788158197955;"[""sol == 'low'""]";129
+12.205586492893886;['numborn > 1.0', 'wismuslim == False'];164
+12.1270605873223;"[""hocc != 'two'"", 'good_media_exposure == False']";73
+11.946778611684591;"[""hocc != 'four'"", 'good_media_exposure == False']";103
+11.929837611542457;"[""heducation != 'high'"", 'wwork == True']";142
+11.905256214896559;"[""heducation != 'moderate-high'"", 'good_media_exposure == False']";82
+11.25877675880333;['wage > 32.0', 'good_media_exposure == False'];71
+10.835888365291883;"[""heducation == 'moderate-high'"", 'wwork == True']";87
+10.793468917397565;"[""heducation != 'low-moderate'"", 'good_media_exposure == False']";67
+10.676789148263115;['wage > 28.0', 'wismuslim == False'];176
+10.400321839016355;"[""hocc != 'three'"", 'wismuslim == False']";160
+10.391805203189241;['wage > 32.0', 'wismuslim == False'];144
+10.313636953857396;"[""sol != 'high'"", 'good_media_exposure == False']";91
+10.263999694568769;['good_media_exposure == False'];109
+9.571839235822704;"[""heducation != 'low'"", 'good_media_exposure == False']";95
+8.990234195165279;"[""heducation == 'low-moderate'""]";178
+8.766152510234948;"[""heducation == 'low'""]";44
+8.617067838830069;['wage > 25.0', 'wismuslim == False'];201
+8.61471487041948;"[""sol != 'low-moderate'"", 'good_media_exposure == False']";69
+8.572099510600312;['good_media_exposure == True', 'wismuslim == False'];212
+8.205728154308499;['wismuslim == False'];220
+8.031593575014222;"[""hocc != 'four'"", 'wismuslim == False']";218
+7.883886631292582;"[""hocc == 'three'"", 'good_media_exposure == False']";54
+7.837751271657961;['wage > 26.0', 'wismuslim == False'];197
+7.673082045537402;['wage > 28.0', 'good_media_exposure == False'];83
+7.66395698539499;"[""hocc == 'four'""]";27
+7.6231235755723;"[""heducation != 'low-moderate'"", 'wismuslim == False']";212
+7.155807667899138;"[""sol != 'low'"", 'wismuslim == False']";215
+6.945043838160818;"[""hocc != 'three'"", 'good_media_exposure == False']";55
+6.346021467321693;"[""heducation != 'low'"", 'wismuslim == False']";218
+6.343727248244418;['wismuslim == True', 'good_media_exposure == False'];101
+6.170049591002232;['wage <= 32.0', 'wismuslim == False'];76
+6.026103561307134;"[""heducation != 'moderate-high'"", 'wismuslim == False']";193
+5.55695721202538;"[""heducation == 'moderate-high'"", 'good_media_exposure == False']";27
+5.376748435494315;"[""sol != 'low-moderate'"", 'wismuslim == False']";205
+5.186710828371847;"[""hocc == 'two'"", 'good_media_exposure == False']";36
+4.864845867349983;['numborn <= 1.0', 'wwork == True'];115
+4.6311415804044085;"[""heducation != 'high'"", 'good_media_exposure == False']";83
+4.52613438099444;['numborn <= 3.0', 'good_media_exposure == False'];48
+4.508948938928943;"[""hocc != 'one'"", 'good_media_exposure == False']";96
+4.4757796330266775;['numborn <= 2.0', 'good_media_exposure == False'];30
+4.247891362416569;"[""heducation == 'high'"", 'wismuslim == False']";183
+4.034923668794537;"[""sol == 'high'"", 'good_media_exposure == False']";18
+3.8004457349175076;"[""sol == 'high'"", 'wismuslim == False']";155
+3.7773091273169452;['wage <= 32.0', 'good_media_exposure == False'];38
+3.7512686883971718;['numborn <= 1.0', 'good_media_exposure == False'];15
+3.0157750639554064;['wage <= 28.0', 'wismuslim == False'];44
+2.9363674192686173;"[""hocc != 'two'"", 'wismuslim == False']";134
+2.7960225257066096;['numborn <= 3.0', 'wismuslim == False'];152
+2.1464280404343477;['numborn <= 2.0', 'wismuslim == False'];97
+1.8398624414717297;['numborn <= 1.0', 'wismuslim == False'];56

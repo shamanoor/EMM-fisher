@@ -1,0 +1,116 @@
+Quality;Description;n
+24.599042376768526;['numborn > 1.0'];1100
+22.277628574845966;['numborn > 1.0', 'good_media_exposure == True'];1006
+20.807027456434703;"[""heducation != 'low'""]";1429
+20.45612579242805;['numborn > 2.0'];824
+19.76522058747334;['numborn > 2.0', 'good_media_exposure == True'];745
+19.574218276498943;"[""hocc != 'one'""]";1037
+19.21872891663707;"[""hocc == 'two'""]";425
+19.126458672709976;"[""heducation != 'low'"", 'good_media_exposure == True']";1334
+18.636296776316144;['numborn > 3.0', 'good_media_exposure == True'];504
+18.38390079175554;['numborn > 3.0'];565
+17.788881748816255;['good_media_exposure == True'];1364
+17.348617585458868;"[""hocc != 'one'"", 'good_media_exposure == True']";941
+17.14235976794637;"[""hocc == 'two'"", 'good_media_exposure == True']";389
+16.764568810309342;"[""sol != 'low'""]";1344
+16.594281762566432;"[""sol != 'low-moderate'""]";1244
+16.090826186081607;['numborn > 1.0', 'wwork == False'];846
+15.821717169532834;"[""heducation != 'moderate-high'""]";1121
+15.489715709026001;"[""sol != 'low'"", 'good_media_exposure == True']";1264
+15.430646796079555;"[""heducation != 'low-moderate'""]";1295
+15.320031887414768;"[""heducation != 'low-moderate'"", 'good_media_exposure == True']";1228
+14.892542844307114;['wage > 25.0'];1117
+14.57312840789712;"[""weducation != 'low'""]";1321
+14.543148341241537;"[""weducation != 'low'"", 'good_media_exposure == True']";1269
+14.397477444524354;"[""hocc != 'one'"", 'wwork == False']";779
+14.345030878893391;"[""hocc != 'three'""]";888
+14.00595029574851;"[""sol != 'low-moderate'"", 'good_media_exposure == True']";1175
+13.593337444255171;['numborn > 2.0', 'wwork == False'];642
+13.555624258539009;['wage > 26.0'];1048
+13.336332490795535;['wage > 28.0'];926
+13.20423993415675;"[""weducation != 'low-moderate'""]";1139
+13.17425768978882;"[""hocc != 'three'"", 'good_media_exposure == True']";833
+12.979554813948953;"[""heducation != 'moderate-high'"", 'good_media_exposure == True']";1039
+12.483564896447282;['good_media_exposure == True', 'wwork == False'];1022
+12.01316085843907;['wage > 25.0', 'good_media_exposure == True'];1026
+11.674708141115483;['wage > 32.0'];693
+11.57120530277799;"[""weducation != 'low-moderate'"", 'good_media_exposure == True']";1058
+11.083855676961084;['numborn > 3.0', 'wwork == False'];445
+11.059738652132307;"[""sol != 'high'"", 'wwork == False']";614
+10.543071605710526;"[""heducation == 'high'"", 'good_media_exposure == True']";873
+10.50382912229585;['wage > 26.0', 'good_media_exposure == True'];958
+10.191536655928616;['wage > 28.0', 'good_media_exposure == True'];843
+10.182409934517581;"[""sol != 'high'"", 'good_media_exposure == True']";698
+10.104520639968962;"[""weducation != 'low'"", 'wwork == False']";987
+10.09895106457456;"[""heducation == 'high'""]";899
+9.021872860357712;"[""sol == 'high'"", 'wwork == True']";194
+8.604974830748393;"[""weducation != 'high'""]";896
+8.321978958556544;"[""heducation == 'high'"", 'wwork == True']";227
+8.178730215488434;"[""hocc != 'two'""]";1048
+8.062523107516327;['numborn <= 3.0'];908
+8.004319739171173;"[""weducation != 'high'"", 'good_media_exposure == True']";793
+7.9957157173180375;"[""sol != 'high'""]";789
+7.616298777680106;['wage > 32.0', 'good_media_exposure == True'];622
+7.58721309055828;"[""weducation != 'high'"", 'wwork == False']";697
+7.42329454492039;['wage > 28.0', 'wwork == False'];667
+7.265913783490378;['wage > 32.0', 'wwork == False'];512
+7.118085888660186;['wage > 25.0', 'wwork == True'];308
+6.964471673616052;['numborn <= 3.0', 'wwork == True'];249
+6.884540915627994;['wage > 26.0', 'wwork == True'];291
+6.826388829148238;"[""hocc != 'two'"", 'good_media_exposure == True']";975
+6.447042982721062;"[""heducation == 'high'"", 'wwork == False']";672
+6.254997862094179;['numborn <= 3.0', 'good_media_exposure == True'];860
+6.030104124542993;['numborn <= 2.0', 'wwork == True'];187
+5.766408371102425;"[""sol != 'low-moderate'"", 'wwork == True']";312
+5.603124443277445;"[""sol == 'high'""]";684
+5.0267649304064435;"[""hocc != 'two'"", 'wwork == False']";794
+4.7634904458287455;['wage <= 32.0'];780
+4.652221037642486;['wage > 32.0', 'wwork == True'];181
+4.559238473532622;['wage <= 32.0', 'good_media_exposure == True'];742
+4.445145537683895;"[""sol == 'high'"", 'good_media_exposure == True']";666
+4.033231210748935;"[""heducation != 'high'"", 'wwork == False']";432
+3.6895931325411873;['wage <= 32.0', 'wwork == False'];592
+3.429439560864847;['wage > 32.0', 'good_media_exposure == False'];71
+3.285115824978491;['numborn <= 2.0'];649
+2.9953824762614536;['wage <= 28.0', 'wwork == False'];437
+2.878268034345269;"[""hocc == 'three'"", 'wwork == False']";453
+2.7956597970728954;"[""hocc == 'three'""]";585
+2.5227700669492075;"[""sol != 'high'"", 'good_media_exposure == False']";91
+2.351146027681843;['wage > 28.0', 'good_media_exposure == False'];83
+2.3225904945838876;['numborn <= 2.0', 'good_media_exposure == True'];619
+2.096350464463218;"[""hocc == 'one'""]";436
+2.0496048397549362;"[""hocc == 'one'"", 'good_media_exposure == True']";423
+2.0365853367916773;['wage > 25.0', 'good_media_exposure == False'];91
+2.0262167756823826;['numborn <= 2.0', 'wwork == False'];462
+1.977508697678426;['wage > 26.0', 'good_media_exposure == False'];90
+1.8516358387544232;"[""weducation != 'high'"", 'wwork == True']";199
+1.8218724410662803;['wage <= 28.0'];547
+1.7199788061089167;['wage <= 28.0', 'good_media_exposure == True'];521
+1.7011954993006588;"[""hocc == 'three'"", 'good_media_exposure == True']";531
+1.6419983595409566;"[""heducation != 'high'""]";574
+1.5215593715348668;"[""heducation != 'moderate-high'"", 'good_media_exposure == False']";82
+1.4403913101404746;"[""heducation == 'low'""]";44
+1.2519301377480263;"[""weducation != 'low-moderate'"", 'good_media_exposure == False']";81
+1.2185752073293719;['good_media_exposure == False'];109
+1.1959005160856597;['wage <= 26.0'];425
+1.122647956172086;['numborn > 3.0', 'good_media_exposure == False'];61
+1.110648075997195;"[""heducation != 'high'"", 'good_media_exposure == True']";491
+1.1086714730945815;"[""heducation == 'low-moderate'""]";178
+1.0912726677142932;"[""weducation == 'high'""]";577
+1.0742669992614629;"[""weducation == 'low-moderate'""]";334
+1.041519572048057;"[""sol != 'low-moderate'"", 'good_media_exposure == False']";69
+1.0384153022465892;"[""hocc == 'two'"", 'good_media_exposure == False']";36
+1.0115828520815584;"[""heducation != 'low'"", 'good_media_exposure == False']";95
+1.0035688899233106;"[""heducation == 'moderate-high'""]";352
+0.966952827285311;['numborn > 1.0', 'good_media_exposure == False'];94
+0.9316363132898315;"[""sol == 'low-moderate'""]";229
+0.9244325080987643;"[""sol == 'high'"", 'wwork == False']";490
+0.8397254659957285;"[""hocc == 'one'"", 'wwork == False']";325
+0.8396206129063439;"[""sol == 'low'""]";129
+0.6857395392278307;"[""hocc != 'one'"", 'good_media_exposure == False']";96
+0.5069105339281204;['wage <= 25.0'];356
+0.4828717020256722;"[""heducation != 'high'"", 'good_media_exposure == False']";83
+0.41221905137926396;"[""weducation == 'low'""]";152
+0.3304275713236595;['numborn <= 1.0'];373
+0.3202988594566179;"[""weducation != 'high'"", 'good_media_exposure == False']";103
+0.0;['numborn <= 2.0', 'good_media_exposure == False'];30

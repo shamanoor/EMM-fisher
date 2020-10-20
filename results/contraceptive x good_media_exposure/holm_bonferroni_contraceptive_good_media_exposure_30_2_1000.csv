@@ -1,0 +1,111 @@
+Quality;Description;n
+41.610441899301904;['numborn > 1.0'];1100
+40.50373719427975;['wage > 25.0'];1117
+39.23407500660379;['wage > 26.0'];1048
+38.22304643029061;['wage > 28.0'];926
+38.031863326803546;['wage > 32.0'];693
+37.373452091947684;['wage > 32.0', 'wwork == False'];512
+36.98290630439601;"[""weducation != 'low-moderate'""]";1139
+36.16659906170492;['numborn > 1.0', 'wismuslim == True'];936
+35.87125293224736;['numborn > 3.0'];565
+35.76200032827681;['wage > 26.0', 'wismuslim == True'];851
+35.59486539727277;['wage > 26.0', 'wwork == False'];757
+34.75611406820622;['wage > 28.0', 'wismuslim == True'];750
+34.65445279314803;['wage > 28.0', 'wwork == False'];667
+34.489607255018356;['wage > 32.0', 'wismuslim == True'];549
+33.07409542405118;"[""weducation != 'low-moderate'"", 'wwork == False']";845
+32.57450756102476;['numborn > 1.0', 'wwork == False'];846
+31.610226125981615;['numborn > 2.0'];824
+31.076393385243627;['numborn > 3.0', 'wwork == False'];445
+29.869535199929402;['numborn > 3.0', 'wismuslim == True'];497
+29.018697504633202;['wismuslim == True'];1253
+28.096802571032725;['numborn > 2.0', 'wwork == False'];642
+26.98485343220213;"[""sol != 'low-moderate'""]";1244
+26.733246983224106;['numborn > 2.0', 'wismuslim == True'];701
+26.421016004705425;"[""heducation != 'low'""]";1429
+26.364676671460728;"[""hocc != 'one'""]";1037
+25.645687872951996;"[""sol != 'low-moderate'"", 'wwork == False']";932
+23.575588075315544;"[""heducation != 'moderate-high'""]";1121
+23.527221942794785;"[""hocc != 'one'"", 'wwork == False']";779
+23.507284797518487;"[""heducation != 'low'"", 'wismuslim == True']";1211
+23.190563459552248;"[""hocc != 'one'"", 'wismuslim == True']";889
+21.89880749510568;"[""heducation != 'high'""]";574
+21.344113347637677;"[""sol != 'high'"", 'wwork == False']";614
+21.067115991760957;"[""sol != 'low'""]";1344
+20.88892143671434;"[""sol != 'high'""]";789
+20.295158688111016;"[""sol != 'high'"", 'wismuslim == True']";724
+20.288159879255893;"[""heducation != 'high'"", 'wismuslim == True']";537
+17.906338537827025;"[""weducation != 'high'""]";896
+17.626194950405125;"[""heducation != 'low-moderate'""]";1295
+17.08482717878782;"[""heducation != 'high'"", 'wwork == False']";432
+16.802877071763323;"[""hocc != 'three'""]";888
+16.63935770538467;"[""sol != 'low'"", 'wwork == False']";995
+16.59226908966421;"[""heducation != 'low-moderate'"", 'wismuslim == True']";1083
+16.397206681531955;"[""weducation != 'high'"", 'wwork == False']";697
+15.932710951797961;"[""weducation != 'high'"", 'wismuslim == True']";819
+15.579567552583336;"[""hocc == 'three'"", 'wismuslim == True']";525
+14.63744981257298;"[""hocc == 'three'""]";585
+14.535295744501152;"[""heducation != 'low-moderate'"", 'wwork == False']";967
+12.375758242656481;['numborn <= 2.0'];649
+11.697221845440701;"[""hocc == 'three'"", 'wwork == False']";453
+11.41323291226189;['numborn <= 2.0', 'wismuslim == True'];552
+10.537190310940879;['numborn <= 2.0', 'wwork == False'];462
+9.693967030789619;"[""heducation == 'moderate-high'""]";352
+9.326007050822252;['numborn <= 3.0', 'wismuslim == True'];756
+8.90050943372644;"[""heducation == 'moderate-high'"", 'wismuslim == True']";325
+8.471023835069033;['numborn <= 3.0', 'wwork == False'];659
+8.464732358550476;['numborn <= 3.0'];908
+7.79690540544753;"[""weducation != 'low'""]";1321
+7.376761673050655;['numborn > 3.0', 'wismuslim == False'];68
+7.220111385568302;"[""heducation == 'low-moderate'""]";178
+7.013030458370055;"[""weducation != 'low'"", 'wismuslim == True']";1104
+6.782750976456539;"[""heducation == 'low-moderate'"", 'wwork == False']";137
+6.730563047264724;"[""heducation == 'low-moderate'"", 'wismuslim == True']";170
+6.178347794504878;"[""weducation != 'low-moderate'"", 'wismuslim == False']";198
+5.855750600598449;"[""weducation == 'high'""]";577
+5.786645183606904;['numborn <= 2.0', 'wwork == True'];187
+5.064576952447924;"[""weducation == 'low'"", 'wwork == False']";117
+4.845059841702565;"[""weducation != 'low'"", 'wwork == False']";987
+4.778835318685978;"[""weducation == 'high'"", 'wismuslim == False']";143
+4.774954081006777;['numborn > 2.0', 'wismuslim == False'];123
+4.650366805777024;"[""heducation == 'low'"", 'wismuslim == True']";42
+4.475770301469751;"[""sol == 'low'"", 'wwork == False']";109
+4.398275443897301;"[""heducation == 'low'""]";44
+4.152897816106039;"[""weducation == 'high'"", 'wwork == False']";407
+4.089381862959585;['numborn > 1.0', 'wismuslim == False'];164
+4.075092391592155;"[""weducation == 'low'""]";152
+3.8650633245288364;"[""sol == 'high'"", 'wismuslim == True']";529
+3.6331554256784595;"[""weducation == 'low'"", 'wismuslim == True']";149
+3.4589366926180363;"[""weducation == 'high'"", 'wismuslim == True']";434
+3.4055361699761137;"[""weducation != 'high'"", 'wwork == True']";199
+3.2916958621532806;"[""sol == 'low'""]";129
+3.195460675370369;"[""hocc != 'three'"", 'wismuslim == False']";160
+3.1299271843073395;"[""sol == 'high'""]";684
+2.978296810938411;"[""sol == 'low-moderate'""]";229
+2.913286269214713;['wage > 32.0', 'wismuslim == False'];144
+2.807505265205611;"[""sol == 'low'"", 'wismuslim == True']";124
+2.673282554899453;['wage > 28.0', 'wismuslim == False'];176
+2.669898101565496;"[""weducation == 'low'"", 'wwork == True']";35
+2.444450639774005;['wage > 25.0', 'wismuslim == False'];201
+2.397788239762004;['wage > 26.0', 'wismuslim == False'];197
+2.296449115151007;"[""heducation != 'low-moderate'"", 'wismuslim == False']";212
+2.2447452755436847;"[""heducation != 'low'"", 'wismuslim == False']";218
+2.171307017607083;['wismuslim == False'];220
+2.0119295307666816;"[""sol == 'high'"", 'wismuslim == False']";155
+1.9410585148304356;['numborn <= 1.0'];373
+1.8875311514519324;"[""weducation == 'high'"", 'wwork == True']";170
+1.81224539544325;"[""hocc == 'one'""]";436
+1.8016767906652094;"[""weducation == 'low-moderate'""]";334
+1.7025934880637097;"[""heducation == 'high'""]";899
+1.6258657910722552;"[""sol != 'low'"", 'wismuslim == False']";215
+1.582195881117262;"[""weducation != 'low'"", 'wismuslim == False']";217
+1.5388436606611773;"[""sol == 'high'"", 'wwork == False']";490
+1.4366721488690493;['wage <= 32.0'];780
+1.2493514087104107;"[""sol != 'high'"", 'wwork == True']";175
+1.1703288173920505;"[""heducation == 'low'"", 'wwork == False']";30
+1.1516096506703621;"[""heducation == 'low-moderate'"", 'wwork == True']";41
+0.6992608417403481;"[""heducation != 'moderate-high'"", 'wismuslim == False']";193
+0.628167701797562;['wage <= 28.0'];547
+0.5288186425749406;"[""sol != 'low-moderate'"", 'wismuslim == False']";205
+0.17393885277945567;['wage <= 25.0'];356
+0.17381903337072074;['wage <= 26.0'];425

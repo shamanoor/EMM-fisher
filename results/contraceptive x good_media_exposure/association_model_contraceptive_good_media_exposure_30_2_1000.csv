@@ -1,0 +1,166 @@
+Quality;Description;n
+41.610441899301904;['numborn > 1.0'];1100
+40.50373719427975;['wage > 25.0'];1117
+39.23407500660379;['wage > 26.0'];1048
+38.22304643029061;['wage > 28.0'];926
+38.031863326803546;['wage > 32.0'];693
+37.373452091947684;['wage > 32.0', 'wwork == False'];512
+37.21648990542919;['wage > 25.0', 'wismuslim == True'];916
+36.98290630439601;"[""weducation != 'low-moderate'""]";1139
+36.38237482686392;"[""hocc != 'four'""]";1446
+36.16659906170492;['numborn > 1.0', 'wismuslim == True'];936
+35.87125293224736;['numborn > 3.0'];565
+35.76200032827681;['wage > 26.0', 'wismuslim == True'];851
+35.61714153117895;['wage > 25.0', 'wwork == False'];809
+35.59486539727277;['wage > 26.0', 'wwork == False'];757
+34.75611406820622;['wage > 28.0', 'wismuslim == True'];750
+34.65445279314803;['wage > 28.0', 'wwork == False'];667
+34.489607255018356;['wage > 32.0', 'wismuslim == True'];549
+33.40589793620859;"[""hocc != 'four'"", 'wismuslim == True']";1228
+33.07409542405118;"[""weducation != 'low-moderate'"", 'wwork == False']";845
+32.57450756102476;['numborn > 1.0', 'wwork == False'];846
+32.021316720070516;"[""weducation != 'moderate-high'""]";1063
+31.87682002550145;"[""weducation != 'moderate-high'"", 'wismuslim == True']";895
+31.610226125981615;['numborn > 2.0'];824
+31.556672515822463;"[""hocc != 'four'"", 'wwork == False']";1088
+31.076393385243627;['numborn > 3.0', 'wwork == False'];445
+30.42345401626046;"[""weducation != 'low-moderate'"", 'wismuslim == True']";941
+30.318277186029206;"[""weducation != 'moderate-high'"", 'wwork == False']";783
+29.869535199929402;['numborn > 3.0', 'wismuslim == True'];497
+29.018697504633202;['wismuslim == True'];1253
+28.432200763844136;['wwork == False'];1104
+28.096802571032725;['numborn > 2.0', 'wwork == False'];642
+26.98485343220213;"[""sol != 'low-moderate'""]";1244
+26.733246983224106;['numborn > 2.0', 'wismuslim == True'];701
+26.421016004705425;"[""heducation != 'low'""]";1429
+26.364676671460728;"[""hocc != 'one'""]";1037
+25.71458223866101;['wwork == False', 'wismuslim == True'];955
+25.645687872951996;"[""sol != 'low-moderate'"", 'wwork == False']";932
+24.909222894857205;"[""sol != 'low-moderate'"", 'wismuslim == True']";1039
+24.362047578132483;"[""heducation != 'low'"", 'wwork == False']";1074
+24.243391818695436;"[""sol != 'moderate-high'""]";1042
+23.575588075315544;"[""heducation != 'moderate-high'""]";1121
+23.527221942794785;"[""hocc != 'one'"", 'wwork == False']";779
+23.507284797518487;"[""heducation != 'low'"", 'wismuslim == True']";1211
+23.190563459552248;"[""hocc != 'one'"", 'wismuslim == True']";889
+22.648954447364787;"[""heducation != 'moderate-high'"", 'wwork == False']";839
+21.89880749510568;"[""heducation != 'high'""]";574
+21.555724249526094;"[""heducation != 'moderate-high'"", 'wismuslim == True']";928
+21.344113347637677;"[""sol != 'high'"", 'wwork == False']";614
+21.067115991760957;"[""sol != 'low'""]";1344
+20.88892143671434;"[""sol != 'high'""]";789
+20.720497934595446;"[""sol != 'moderate-high'"", 'wismuslim == True']";867
+20.295158688111016;"[""sol != 'high'"", 'wismuslim == True']";724
+20.288159879255893;"[""heducation != 'high'"", 'wismuslim == True']";537
+19.848408277351062;"[""sol != 'low'"", 'wismuslim == True']";1129
+19.36480820334078;"[""sol != 'moderate-high'"", 'wwork == False']";771
+19.20271474525791;"[""hocc == 'two'"", 'wwork == False']";310
+17.906338537827025;"[""weducation != 'high'""]";896
+17.69948488824705;"[""hocc == 'two'""]";425
+17.626194950405125;"[""heducation != 'low-moderate'""]";1295
+17.189126047205498;"[""hocc != 'three'"", 'wwork == False']";651
+17.08482717878782;"[""heducation != 'high'"", 'wwork == False']";432
+16.802877071763323;"[""hocc != 'three'""]";888
+16.63935770538467;"[""sol != 'low'"", 'wwork == False']";995
+16.59226908966421;"[""heducation != 'low-moderate'"", 'wismuslim == True']";1083
+16.397206681531955;"[""weducation != 'high'"", 'wwork == False']";697
+16.343624884649145;"[""hocc != 'two'"", 'wismuslim == True']";914
+16.223158051930625;"[""hocc != 'two'""]";1048
+15.932710951797961;"[""weducation != 'high'"", 'wismuslim == True']";819
+15.579567552583336;"[""hocc == 'three'"", 'wismuslim == True']";525
+15.013274081857723;"[""sol == 'moderate-high'"", 'wismuslim == True']";386
+14.63744981257298;"[""hocc == 'three'""]";585
+14.535295744501152;"[""heducation != 'low-moderate'"", 'wwork == False']";967
+13.562190662593606;"[""sol == 'moderate-high'"", 'wwork == False']";333
+13.277237015861742;"[""hocc != 'three'"", 'wismuslim == True']";728
+13.092244915116199;"[""hocc != 'two'"", 'wwork == False']";794
+12.670274129949782;"[""sol == 'moderate-high'""]";431
+12.62627317132957;"[""hocc == 'two'"", 'wismuslim == True']";339
+12.375758242656481;['numborn <= 2.0'];649
+11.697221845440701;"[""hocc == 'three'"", 'wwork == False']";453
+11.41323291226189;['numborn <= 2.0', 'wismuslim == True'];552
+10.537190310940879;['numborn <= 2.0', 'wwork == False'];462
+9.693967030789619;"[""heducation == 'moderate-high'""]";352
+9.331326267567434;['numborn > 1.0', 'wwork == True'];254
+9.326007050822252;['numborn <= 3.0', 'wismuslim == True'];756
+8.90050943372644;"[""heducation == 'moderate-high'"", 'wismuslim == True']";325
+8.471023835069033;['numborn <= 3.0', 'wwork == False'];659
+8.464732358550476;['numborn <= 3.0'];908
+7.79690540544753;"[""weducation != 'low'""]";1321
+7.376761673050655;['numborn > 3.0', 'wismuslim == False'];68
+7.220111385568302;"[""heducation == 'low-moderate'""]";178
+7.030085649006166;"[""weducation != 'low-moderate'"", 'wwork == True']";294
+6.598937424225963;"[""heducation == 'moderate-high'"", 'wwork == True']";87
+6.4021939208699665;['wage > 25.0', 'wwork == True'];308
+6.178347794504878;"[""weducation != 'low-moderate'"", 'wismuslim == False']";198
+5.91048843908551;"[""heducation == 'moderate-high'"", 'wwork == False']";265
+5.855750600598449;"[""weducation == 'high'""]";577
+5.786645183606904;['numborn <= 2.0', 'wwork == True'];187
+5.660077956690626;"[""hocc != 'four'"", 'wwork == True']";358
+5.39817851710749;['wage > 26.0', 'wwork == True'];291
+5.330257533683942;"[""sol != 'moderate-high'"", 'wwork == True']";271
+5.303227032752012;"[""sol != 'high'"", 'wismuslim == False']";65
+5.261094630015225;"[""sol != 'low'"", 'wwork == True']";349
+5.2524657614688275;['numborn > 3.0', 'wwork == True'];120
+5.134450551587943;['wage > 28.0', 'wwork == True'];259
+5.007948274375731;['wwork == True'];369
+4.904097077531226;"[""heducation != 'high'"", 'wwork == True']";142
+4.774954081006777;['numborn > 2.0', 'wismuslim == False'];123
+4.683780003498827;"[""heducation != 'low-moderate'"", 'wwork == True']";328
+4.398275443897301;"[""heducation == 'low'""]";44
+4.205599828311527;['numborn > 2.0', 'wwork == True'];182
+4.179371213703671;['wismuslim == True', 'wwork == True'];298
+4.089381862959585;['numborn > 1.0', 'wismuslim == False'];164
+4.075092391592155;"[""weducation == 'low'""]";152
+4.05230571978543;"[""heducation != 'low'"", 'wwork == True']";355
+4.0352578704734565;"[""hocc == 'two'"", 'wismuslim == False']";86
+3.9277429868190565;['wage > 32.0', 'wwork == True'];181
+3.676472566943951;"[""hocc != 'one'"", 'wwork == True']";258
+3.473449347232048;"[""weducation != 'moderate-high'"", 'wwork == True']";280
+3.4660311684572447;"[""hocc != 'two'"", 'wwork == True']";254
+3.4246695434570844;['wwork == False', 'wismuslim == False'];149
+3.4055361699761137;"[""weducation != 'high'"", 'wwork == True']";199
+3.2916958621532806;"[""sol == 'low'""]";129
+3.195460675370369;"[""hocc != 'three'"", 'wismuslim == False']";160
+3.1299271843073395;"[""sol == 'high'""]";684
+3.02683530234808;"[""hocc == 'three'"", 'wwork == True']";132
+2.978296810938411;"[""sol == 'low-moderate'""]";229
+2.913286269214713;['wage > 32.0', 'wismuslim == False'];144
+2.871116839901406;"[""sol != 'low-moderate'"", 'wwork == True']";312
+2.8215252390913745;"[""weducation == 'moderate-high'""]";410
+2.673282554899453;['wage > 28.0', 'wismuslim == False'];176
+2.444450639774005;['wage > 25.0', 'wismuslim == False'];201
+2.397788239762004;['wage > 26.0', 'wismuslim == False'];197
+2.298072522685586;"[""heducation != 'moderate-high'"", 'wwork == True']";282
+2.296449115151007;"[""heducation != 'low-moderate'"", 'wismuslim == False']";212
+2.2704693408068692;"[""hocc != 'three'"", 'wwork == True']";237
+2.2447452755436847;"[""heducation != 'low'"", 'wismuslim == False']";218
+2.229140362769159;['numborn <= 3.0', 'wwork == True'];249
+2.171307017607083;['wismuslim == False'];220
+2.138687884469438;"[""hocc != 'four'"", 'wismuslim == False']";218
+1.9448211114121072;"[""heducation == 'moderate-high'"", 'wismuslim == False']";27
+1.9410585148304356;['numborn <= 1.0'];373
+1.9377016794088067;"[""sol == 'moderate-high'"", 'wismuslim == False']";45
+1.8510006339889757;"[""weducation != 'moderate-high'"", 'wismuslim == False']";168
+1.81224539544325;"[""hocc == 'one'""]";436
+1.8016767906652094;"[""weducation == 'low-moderate'""]";334
+1.7025934880637097;"[""heducation == 'high'""]";899
+1.6932713539083628;"[""weducation != 'high'"", 'wismuslim == False']";77
+1.634252060096724;"[""hocc != 'one'"", 'wismuslim == False']";148
+1.6258657910722552;"[""sol != 'low'"", 'wismuslim == False']";215
+1.5621690343317147;"[""heducation != 'high'"", 'wismuslim == False']";37
+1.54817312510773;"[""hocc == 'two'"", 'wwork == True']";115
+1.4366721488690493;['wage <= 32.0'];780
+1.2493514087104107;"[""sol != 'high'"", 'wwork == True']";175
+1.1909776017206495;"[""sol != 'moderate-high'"", 'wismuslim == False']";175
+1.1769079257869801;"[""hocc == 'four'""]";27
+1.0514323451687348;"[""hocc != 'two'"", 'wismuslim == False']";134
+0.6992608417403481;"[""heducation != 'moderate-high'"", 'wismuslim == False']";193
+0.628167701797562;['wage <= 28.0'];547
+0.5288186425749406;"[""sol != 'low-moderate'"", 'wismuslim == False']";205
+0.5166074150715743;"[""sol == 'moderate-high'"", 'wwork == True']";98
+0.49945064858817423;['numborn <= 3.0', 'wismuslim == False'];152
+0.17393885277945567;['wage <= 25.0'];356
+0.17381903337072074;['wage <= 26.0'];425
+0.058874415656193974;"[""hocc == 'three'"", 'wismuslim == False']";60
+0.0;['numborn <= 2.0', 'wismuslim == False'];97
