@@ -11,7 +11,7 @@ rpy2.robjects.numpy2ri.activate()
 
 stats = importr('stats')
 
-dataset = 'contraceptive'
+dataset = 'diabetes'
 
 if dataset == 'contraceptive':
     df = pd.read_csv("./data/contraceptive_02_oct.csv")
@@ -22,7 +22,7 @@ if dataset == 'contraceptive':
 
     #features that are used to find subgroups with
     features = ['weducation', 'heducation', 'wismuslim', 'wwork', 'hocc', 'sol', 'contraceptive', 'good_media_exposure', 'wage', 'numborn']
-    targets = ['contraceptive', 'good_media_exposure']
+    targets = ['contraceptive', 'wismuslim']
 
 if dataset == 'diabetes':
 
@@ -48,7 +48,7 @@ if dataset == 'cars':
 
     # features that are used to find subgroups with
     features = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'acceptability']
-    targets = ['acceptability', 'safety']
+    targets = ['acceptability', 'maint']
 
 features = [element for element in features if element not in targets]  # remove target features from feature list
 alpha = 0.05
@@ -462,7 +462,7 @@ def fisher_exact(desc):
     crosstab = np.array(crosstab)
 
     # finally compute pvalue, keep workspace at least 2e9 for 2x6 table, or simulate by using: simulate_p_value = True
-    pval = stats.fisher_test(crosstab, simulate_p_value = True, B=100000)[0][0]
+    pval = stats.fisher_test(crosstab, workspace=2e9)[0][0]
 
     return pval
 
