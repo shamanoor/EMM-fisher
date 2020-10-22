@@ -14,7 +14,7 @@ stats = importr('stats')
 dataset = 'contraceptive'
 
 if dataset == 'contraceptive':
-    df = pd.read_csv("./data/contraceptive_02_oct.csv")
+    df = pd.read_csv("data/contraceptive.csv")
     abs_omega = len(df)
     print("number of fields: %d" % abs_omega)
 
